@@ -77,5 +77,6 @@ cp .ssh/$container_name.pub $container_dir/root/.ssh/authorized_keys
 systemctl daemon-reload
 systemctl enable $container_name
 systemctl start $container_name
+systemctl set-property $container_name CPUShares=$config_CPUShares MemoryLimit=$config_MemoryLimit
 
 
