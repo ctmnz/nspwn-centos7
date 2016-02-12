@@ -32,7 +32,6 @@ echo root:$container_root_password | chroot $container_dir chpasswd
 ### yum --installroot=$container_dir install -y httpd
 
 yum --installroot=$container_dir clean all
-
 chroot $container_dir systemctl enable sshd
 
 ### Make it as service (in host)
